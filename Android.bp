@@ -1,6 +1,9 @@
 cc_library_headers {
     name: "display_intf_headers",
     vendor_available: true,
+    defaults: [
+        "uses_gralloc1_defaults",
+    ],
     export_include_dirs: [
         "gralloc",
         "include",
