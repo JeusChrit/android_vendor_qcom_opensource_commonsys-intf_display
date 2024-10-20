@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
 ///////////////////////////////////////////////////////////////////////////////
@@ -20,12 +20,15 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.hardware.display.color;
-@Backing(type="int") @VintfStability
-enum Result {
-  OK,
-  PERMISSION_DENIED = (-1) /* -1 */,
-  NO_MEMORY = (-12) /* -12 */,
-  BAD_VALUE = (-22) /* -22 */,
-  INVALID_OPERATION = (-38) /* -38 */,
+package vendor.qti.hardware.display.config;
+@VintfStability
+parcelable CacV2ConfigExt {
+  double redCenterPhaseStep;
+  double redSecondOrderPhaseStep;
+  double blueCenterPhaseStep;
+  double blueSecondOrderPhaseStep;
+  double pixelPitch;
+  double normalization;
+  int verticalCenter;
+  int horizontalCenter;
 }

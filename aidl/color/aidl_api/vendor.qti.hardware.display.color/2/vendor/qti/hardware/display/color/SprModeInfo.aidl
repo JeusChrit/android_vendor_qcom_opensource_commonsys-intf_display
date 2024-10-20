@@ -21,11 +21,7 @@
 // later when a module using the interface is updated, e.g., Mainline modules.
 
 package vendor.qti.hardware.display.color;
-@Backing(type="int") @VintfStability
-enum Result {
-  OK,
-  PERMISSION_DENIED = (-1) /* -1 */,
-  NO_MEMORY = (-12) /* -12 */,
-  BAD_VALUE = (-22) /* -22 */,
-  INVALID_OPERATION = (-38) /* -38 */,
+@VintfStability
+parcelable SprModeInfo {
+  int mode_id;
 }
